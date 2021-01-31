@@ -141,7 +141,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
     
     private func generateRandomTransform() -> Float {
-        return Float.random(in: -50..<50)
+        return Float.random(in: -40..<40)
     }
     
     private func playSound(fileName: String) {
