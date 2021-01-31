@@ -1,8 +1,17 @@
 //
 //  ViewController.swift
-//  Corona Rush
+//  EchoAR-iOS-SceneKit
 //
-//  Created by Alexander Hall on 1/30/21.
+//  Copyright © echoAR, Inc. 2018-2020.
+//
+//  Use subject to the Terms of Service available at https://www.echoar.xyz/terms,
+//  or another agreement between echoAR, Inc. and you, your company or other organization.
+//
+//  Unless expressly provided otherwise, the software provided under these Terms of Service
+//  is made available strictly on an “AS IS” BASIS WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.
+//  Please review the Terms of Service for details on these and other terms and conditions.
+//
+//  Created by Alexander Kutner.
 //
 
 import UIKit
@@ -13,27 +22,34 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 
     @IBOutlet var sceneView: ARSCNView!
     
+    var e:EchoAR!;
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Set the view's delegate
         sceneView.delegate = self
+        //let scene = SCNScene(named: "art.scnassets/River otter.usdz")!
         
         // Show statistics such as fps and timing information
         sceneView.showsStatistics = true
-        
-        // Create a new scene
-        let scene = SCNScene(named: "art.scnassets/ship.scn")!
+        let e = EchoAR();
+        let scene = SCNScene()
+        e.loadAllNodes(){ (nodes) in
+            for node in nodes{
+                scene.rootNode.addChildNode(node);
+            }
+        }
         
         // Set the scene to the view
-        sceneView.scene = scene
+        sceneView.scene=scene;
     }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         // Create a session configuration
         let configuration = ARWorldTrackingConfiguration()
+        //configuration.planeDetection = .horizontal
 
         // Run the view's session
         sceneView.session.run(configuration)
