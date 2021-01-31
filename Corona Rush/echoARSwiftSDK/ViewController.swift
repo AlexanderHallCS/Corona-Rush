@@ -25,6 +25,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet var coronaLeftLabel: UILabel!
     
     var e:EchoAR!;
+    var scene: SCNScene?
     
     //var childrenNodes: [SCNNode] = []
     
@@ -42,22 +43,13 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         // Show statistics such as fps and timing information
         //sceneView.showsStatistics = true
-        let e = EchoAR();
-        let scene = SCNScene()
-        e.loadAllNodes(){ (nodes) in
-            for node in nodes{
-                //node.name = "\(coronaCounter)"
-                //childrenNodes.append(node)
-                scene.rootNode.addChildNode(node);
-                coronaCounter += 1
-            }
-        }
+        scene = SCNScene()
+        reloadCoronaviruses()
         
         startTimer()
-        coronaLeftLabel.text = "Coronaviruses Left: \(coronaCounter)"
         
         // Set the scene to the view
-        sceneView.scene=scene;
+        sceneView.scene=scene!;
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -112,6 +104,20 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         }
         result.node.removeFromParentNode()
         coronaCounter -= 1
+        coronaLeftLabel.text = "Coronaviruses Left: \(coronaCounter)"
+        if coronaCounter == 0 {
+            reloadCoronaviruses()
+        }
+    }
+    
+    func reloadCoronaviruses() {
+        let e = EchoAR();
+        e.loadAllNodes(){ (nodes) in
+            for node in nodes {
+                scene!.rootNode.addChildNode(node);
+                coronaCounter += 1
+            }
+        }
         coronaLeftLabel.text = "Coronaviruses Left: \(coronaCounter)"
     }
     
