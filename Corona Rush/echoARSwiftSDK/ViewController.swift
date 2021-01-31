@@ -26,10 +26,12 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     var e:EchoAR!;
     
-    var childrenNodes: [SCNNode] = []
+    //var childrenNodes: [SCNNode] = []
     
     var seconds = 30.0
     var inGameTimer = Timer()
+    
+    var coronaCounter = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,13 +46,15 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let scene = SCNScene()
         e.loadAllNodes(){ (nodes) in
             for node in nodes{
-                childrenNodes.append(node)
+                //node.name = "\(coronaCounter)"
+                //childrenNodes.append(node)
                 scene.rootNode.addChildNode(node);
+                coronaCounter += 1
             }
         }
         
         startTimer()
-        coronaLeftLabel.text = "Coronaviruses Left: \(childrenNodes.count)"
+        coronaLeftLabel.text = "Coronaviruses Left: \(coronaCounter)"
         
         // Set the scene to the view
         sceneView.scene=scene;
@@ -106,15 +110,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         guard let result = sceneView.hitTest(viewTouchLocation, options: nil).first else {
             return
         }
-        for nodeIndex in 0..<childrenNodes.count {
-            print("Result: \(result.node)")
-            print("Current Node: \(childrenNodes[nodeIndex])")
-            if result.node == childrenNodes[nodeIndex] {
-                childrenNodes.remove(at: nodeIndex)
-                coronaLeftLabel.text = "Coronaviruses Left: \(childrenNodes.count)"
-            }
-        }
         result.node.removeFromParentNode()
+        coronaCounter -= 1
+        coronaLeftLabel.text = "Coronaviruses Left: \(coronaCounter)"
     }
     
     func session(_ session: ARSession, didFailWithError error: Error) {
