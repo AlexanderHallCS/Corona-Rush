@@ -14,12 +14,12 @@
 		112A19F725C6239300EE87E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 112A19F525C6239300EE87E3 /* LaunchScreen.storyboard */; };
 		112A1A0225C638C100EE87E3 /* La Cumbia Del Coronavirus.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 112A1A0125C638C100EE87E3 /* La Cumbia Del Coronavirus.mp3 */; };
 		112A1A0F25C642A700EE87E3 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112A1A0E25C642A700EE87E3 /* StartViewController.swift */; };
-		11F186D225C6903700BAFB62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F186CD25C6903700BAFB62 /* ViewController.swift */; };
-		11F186D325C6903700BAFB62 /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = 11F186CE25C6903700BAFB62 /* LICENSE.md */; };
-		11F186D425C6903700BAFB62 /* EchoAR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F186CF25C6903700BAFB62 /* EchoAR.swift */; };
-		11F186D525C6903700BAFB62 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F186D025C6903700BAFB62 /* Entry.swift */; };
-		11F186D625C6903700BAFB62 /* RemoteTransformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F186D125C6903700BAFB62 /* RemoteTransformation.swift */; };
-		11F186D925C6905F00BAFB62 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F186D825C6905F00BAFB62 /* Constants.swift */; };
+		11F186E225C6942900BAFB62 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F186DC25C6942900BAFB62 /* Constants.swift */; };
+		11F186E325C6942900BAFB62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F186DD25C6942900BAFB62 /* ViewController.swift */; };
+		11F186E425C6942900BAFB62 /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = 11F186DE25C6942900BAFB62 /* LICENSE.md */; };
+		11F186E525C6942900BAFB62 /* EchoAR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F186DF25C6942900BAFB62 /* EchoAR.swift */; };
+		11F186E625C6942900BAFB62 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F186E025C6942900BAFB62 /* Entry.swift */; };
+		11F186E725C6942900BAFB62 /* RemoteTransformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F186E125C6942900BAFB62 /* RemoteTransformation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,12 +32,12 @@
 		112A19F825C6239300EE87E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		112A1A0125C638C100EE87E3 /* La Cumbia Del Coronavirus.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "La Cumbia Del Coronavirus.mp3"; path = "../../../Corona Rush Assets/La Cumbia Del Coronavirus.mp3"; sourceTree = "<group>"; };
 		112A1A0E25C642A700EE87E3 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
-		11F186CD25C6903700BAFB62 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		11F186CE25C6903700BAFB62 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
-		11F186CF25C6903700BAFB62 /* EchoAR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EchoAR.swift; sourceTree = "<group>"; };
-		11F186D025C6903700BAFB62 /* Entry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
-		11F186D125C6903700BAFB62 /* RemoteTransformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteTransformation.swift; sourceTree = "<group>"; };
-		11F186D825C6905F00BAFB62 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		11F186DC25C6942900BAFB62 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		11F186DD25C6942900BAFB62 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		11F186DE25C6942900BAFB62 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		11F186DF25C6942900BAFB62 /* EchoAR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EchoAR.swift; sourceTree = "<group>"; };
+		11F186E025C6942900BAFB62 /* Entry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		11F186E125C6942900BAFB62 /* RemoteTransformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteTransformation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +70,7 @@
 		112A19E925C6239200EE87E3 /* Corona Rush */ = {
 			isa = PBXGroup;
 			children = (
-				11F186CC25C6903700BAFB62 /* echoARSwiftSDK */,
+				11F186DB25C6942900BAFB62 /* echoARSwiftSDK */,
 				112A1A0025C638B300EE87E3 /* Sounds */,
 				112A19EA25C6239200EE87E3 /* AppDelegate.swift */,
 				112A19EC25C6239200EE87E3 /* art.scnassets */,
@@ -79,6 +79,7 @@
 				112A19F325C6239300EE87E3 /* Assets.xcassets */,
 				112A19F525C6239300EE87E3 /* LaunchScreen.storyboard */,
 				112A19F825C6239300EE87E3 /* Info.plist */,
+				11F186DC25C6942900BAFB62 /* Constants.swift */,
 			);
 			path = "Corona Rush";
 			sourceTree = "<group>";
@@ -91,18 +92,16 @@
 			path = Sounds;
 			sourceTree = "<group>";
 		};
-		11F186CC25C6903700BAFB62 /* echoARSwiftSDK */ = {
+		11F186DB25C6942900BAFB62 /* echoARSwiftSDK */ = {
 			isa = PBXGroup;
 			children = (
-				11F186CD25C6903700BAFB62 /* ViewController.swift */,
-				11F186CE25C6903700BAFB62 /* LICENSE.md */,
-				11F186CF25C6903700BAFB62 /* EchoAR.swift */,
-				11F186D825C6905F00BAFB62 /* Constants.swift */,
-				11F186D025C6903700BAFB62 /* Entry.swift */,
-				11F186D125C6903700BAFB62 /* RemoteTransformation.swift */,
+				11F186DD25C6942900BAFB62 /* ViewController.swift */,
+				11F186DE25C6942900BAFB62 /* LICENSE.md */,
+				11F186DF25C6942900BAFB62 /* EchoAR.swift */,
+				11F186E025C6942900BAFB62 /* Entry.swift */,
+				11F186E125C6942900BAFB62 /* RemoteTransformation.swift */,
 			);
-			name = echoARSwiftSDK;
-			path = ../../echoARSwiftSDK;
+			path = echoARSwiftSDK;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,7 +165,7 @@
 				112A19F725C6239300EE87E3 /* LaunchScreen.storyboard in Resources */,
 				112A1A0225C638C100EE87E3 /* La Cumbia Del Coronavirus.mp3 in Resources */,
 				112A19F425C6239300EE87E3 /* Assets.xcassets in Resources */,
-				11F186D325C6903700BAFB62 /* LICENSE.md in Resources */,
+				11F186E425C6942900BAFB62 /* LICENSE.md in Resources */,
 				112A19F225C6239200EE87E3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -178,13 +177,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11F186D625C6903700BAFB62 /* RemoteTransformation.swift in Sources */,
-				11F186D525C6903700BAFB62 /* Entry.swift in Sources */,
-				11F186D225C6903700BAFB62 /* ViewController.swift in Sources */,
-				11F186D425C6903700BAFB62 /* EchoAR.swift in Sources */,
-				11F186D925C6905F00BAFB62 /* Constants.swift in Sources */,
+				11F186E625C6942900BAFB62 /* Entry.swift in Sources */,
 				112A1A0F25C642A700EE87E3 /* StartViewController.swift in Sources */,
+				11F186E725C6942900BAFB62 /* RemoteTransformation.swift in Sources */,
 				112A19EB25C6239200EE87E3 /* AppDelegate.swift in Sources */,
+				11F186E325C6942900BAFB62 /* ViewController.swift in Sources */,
+				11F186E225C6942900BAFB62 /* Constants.swift in Sources */,
+				11F186E525C6942900BAFB62 /* EchoAR.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
