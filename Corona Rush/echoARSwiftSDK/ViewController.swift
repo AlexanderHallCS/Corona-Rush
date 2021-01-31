@@ -17,22 +17,25 @@
 import UIKit
 import SceneKit
 import ARKit
+import AVFoundation
 
 class ViewController: UIViewController, ARSCNViewDelegate {
 
     @IBOutlet var sceneView: ARSCNView!
     @IBOutlet var timerLabel: UILabel!
     @IBOutlet var coronaLeftLabel: UILabel!
+    @IBOutlet var levelLabel: UILabel!
     
     var e:EchoAR!;
     var scene: SCNScene?
     
-    //var childrenNodes: [SCNNode] = []
+    var audioPlayer: AVAudioPlayer?
     
     var seconds = 60.0
     var inGameTimer = Timer()
     
     var coronaCounter = 0
+    var level = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -101,6 +104,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             return
         }
         result.node.removeFromParentNode()
+        playSound(fileName: "Splat - Gaming Sound Effect (HD)")
         coronaCounter -= 1
         coronaLeftLabel.text = "Coronaviruses Left: \(coronaCounter)"
         if coronaCounter == 0 {
@@ -125,12 +129,36 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                 coronaCounter += 1
             }
         }
+        level += 1
         coronaLeftLabel.text = "Coronaviruses Left: \(coronaCounter)"
+        levelLabel.text = "Level: \(level)"
+        if level > 1 {
+            playSound(fileName: "mafia city level up sound effect")
+        }
     }
     
-    func generateRandomTransform() -> Float {
+    private func generateRandomTransform() -> Float {
         return Float.random(in: -50..<50)
     }
+    
+    private func playSound(fileName: String) {
+        guard let url = Bundle.main.url(forResource: fileName, withExtension: "mp3") else {
+            return
+        }
+        
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+            try AVAudioSession.sharedInstance().setActive(true)
+            audioPlayer = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
+            guard let audioPlayer = audioPlayer else {
+                return
+            }
+            audioPlayer.play()
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
+
     
     func session(_ session: ARSession, didFailWithError error: Error) {
         // Present an error message to the user
