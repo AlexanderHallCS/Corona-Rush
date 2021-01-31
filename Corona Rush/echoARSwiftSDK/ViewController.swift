@@ -21,10 +21,15 @@ import ARKit
 class ViewController: UIViewController, ARSCNViewDelegate {
 
     @IBOutlet var sceneView: ARSCNView!
+    @IBOutlet var timerLabel: UILabel!
+    @IBOutlet var coronaLeftLabel: UILabel!
     
     var e:EchoAR!;
     
     var childrenNodes: [SCNNode] = []
+    
+    var seconds = 30.0
+    var inGameTimer = Timer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +39,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         //let scene = SCNScene(named: "art.scnassets/River otter.usdz")!
         
         // Show statistics such as fps and timing information
-        sceneView.showsStatistics = true
+        //sceneView.showsStatistics = true
         let e = EchoAR();
         let scene = SCNScene()
         e.loadAllNodes(){ (nodes) in
@@ -43,6 +48,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                 scene.rootNode.addChildNode(node);
             }
         }
+        
+        startTimer()
+        coronaLeftLabel.text = "Coronaviruses Left: \(childrenNodes.count)"
         
         // Set the scene to the view
         sceneView.scene=scene;
@@ -74,12 +82,37 @@ class ViewController: UIViewController, ARSCNViewDelegate {
      
         return node
     } */
+    
+    private func startTimer() {
+        let attributes: [NSAttributedString.Key:Any] = [.strokeColor: #colorLiteral(red: 0.1665180378, green: 1, blue: 0.2744433064, alpha: 1), .foregroundColor: #colorLiteral(red: 0.02326852587, green: 0.5836131899, blue: 0.01616205207, alpha: 1), .strokeWidth: -4.0]
+        timerLabel.attributedText = NSAttributedString(string: "\(Int(seconds))", attributes: attributes)
+        inGameTimer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { (Timer) in
+            if self.seconds > -1.0 {
+                if Double(String(String(self.seconds).split(separator: ".")[1].first!))! == 0.0 {
+                    self.timerLabel.attributedText = NSAttributedString(string: "\(Int(self.seconds))", attributes: attributes)
+                }
+                self.seconds -= 0.1
+            } else {
+                self.timerLabel.attributedText = NSAttributedString(string: "0", attributes: attributes)
+                self.inGameTimer.invalidate()
+                // game over
+            }
+        })
+    }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch = touches.first!
         let viewTouchLocation:CGPoint = touch.location(in: sceneView)
         guard let result = sceneView.hitTest(viewTouchLocation, options: nil).first else {
             return
+        }
+        for nodeIndex in 0..<childrenNodes.count {
+            print("Result: \(result.node)")
+            print("Current Node: \(childrenNodes[nodeIndex])")
+            if result.node == childrenNodes[nodeIndex] {
+                childrenNodes.remove(at: nodeIndex)
+                coronaLeftLabel.text = "Coronaviruses Left: \(childrenNodes.count)"
+            }
         }
         result.node.removeFromParentNode()
     }

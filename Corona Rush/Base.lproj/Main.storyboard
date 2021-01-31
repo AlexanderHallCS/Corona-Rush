@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="n6x-nl-5A6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="n6x-nl-5A6">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -19,9 +19,8 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StartBG" translatesAutoresizingMaskIntoConstraints="NO" id="g9O-1j-VBg">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3MB-jV-yZe">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3MB-jV-yZe">
                                 <rect key="frame" x="78" y="560" width="258" height="110"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="PlayButton"/>
                                 <connections>
                                     <segue destination="BV1-FR-VrT" kind="presentation" modalTransitionStyle="crossDissolve" id="TjT-iR-8rl"/>
@@ -31,9 +30,13 @@
                         <viewLayoutGuide key="safeArea" id="rmN-pB-woj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="3MB-jV-yZe" secondAttribute="bottom" constant="66" id="AE1-O2-sTf"/>
+                            <constraint firstItem="3MB-jV-yZe" firstAttribute="centerX" secondItem="rmN-pB-woj" secondAttribute="centerX" id="BS4-gB-8cR"/>
                             <constraint firstItem="g9O-1j-VBg" firstAttribute="centerX" secondItem="Xwq-Gg-pVp" secondAttribute="centerX" id="VMH-05-HoK"/>
                             <constraint firstItem="g9O-1j-VBg" firstAttribute="centerY" secondItem="Xwq-Gg-pVp" secondAttribute="centerY" id="Wfw-Dj-HBc"/>
                             <constraint firstItem="g9O-1j-VBg" firstAttribute="height" secondItem="Xwq-Gg-pVp" secondAttribute="height" id="dxG-OC-EfL"/>
+                            <constraint firstItem="3MB-jV-yZe" firstAttribute="height" secondItem="Xwq-Gg-pVp" secondAttribute="height" multiplier="0.149457" id="dy1-d0-k51"/>
+                            <constraint firstItem="3MB-jV-yZe" firstAttribute="width" secondItem="Xwq-Gg-pVp" secondAttribute="width" multiplier="0.623188" id="fry-8N-vVH"/>
                             <constraint firstItem="g9O-1j-VBg" firstAttribute="width" secondItem="Xwq-Gg-pVp" secondAttribute="width" id="jMc-o0-vmA"/>
                         </constraints>
                     </view>
@@ -53,19 +56,41 @@
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BrB-h1-WRS">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </arscnView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coronaviruses Left: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qdz-A0-0Uz">
+                                <rect key="frame" x="10" y="28" width="162.33333333333334" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.091944514902992935" blue="0.23029189223504687" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ShH-pI-RK0">
+                                <rect key="frame" x="337.33333333333331" y="15" width="66.666666666666686" height="65.666666666666671"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="55"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fQZ-KI-GVf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="ShH-pI-RK0" firstAttribute="height" secondItem="U0K-SW-4ec" secondAttribute="height" multiplier="0.089221" id="37O-X1-k95"/>
+                            <constraint firstItem="ShH-pI-RK0" firstAttribute="width" secondItem="U0K-SW-4ec" secondAttribute="width" multiplier="0.161031" id="GaA-Cr-uLB"/>
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" id="GsS-dJ-CKf"/>
+                            <constraint firstItem="qdz-A0-0Uz" firstAttribute="height" secondItem="U0K-SW-4ec" secondAttribute="height" multiplier="0.0285326" id="JA2-DW-EM9"/>
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="bottom" secondItem="fQZ-KI-GVf" secondAttribute="bottom" id="VpT-BR-CcM"/>
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="trailing" secondItem="fQZ-KI-GVf" secondAttribute="trailing" id="XyZ-9z-H8e"/>
+                            <constraint firstItem="qdz-A0-0Uz" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" constant="10" id="aKZ-Dx-deC"/>
+                            <constraint firstAttribute="trailing" secondItem="ShH-pI-RK0" secondAttribute="trailing" constant="10" id="dGn-6l-cNm"/>
+                            <constraint firstItem="qdz-A0-0Uz" firstAttribute="top" secondItem="U0K-SW-4ec" secondAttribute="top" constant="28" id="eKy-29-Be2"/>
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="top" secondItem="U0K-SW-4ec" secondAttribute="top" id="rJc-2c-zQA"/>
+                            <constraint firstAttribute="top" secondItem="ShH-pI-RK0" secondAttribute="top" constant="-15" id="sP0-B4-WQk"/>
+                            <constraint firstItem="qdz-A0-0Uz" firstAttribute="width" secondItem="U0K-SW-4ec" secondAttribute="width" multiplier="0.39211" id="x9n-aD-YHQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Fdv-ib-8k2"/>
                     <connections>
+                        <outlet property="coronaLeftLabel" destination="qdz-A0-0Uz" id="Dqb-ow-ZdM"/>
                         <outlet property="sceneView" destination="BrB-h1-WRS" id="5nT-qQ-ynl"/>
+                        <outlet property="timerLabel" destination="ShH-pI-RK0" id="Zvc-Fq-bEV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
