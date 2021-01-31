@@ -135,7 +135,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         }
         coronaLeftLabel.text = "Coronaviruses Left: \(coronaCounter)"
         levelLabel.text = "Level: \(level)"
-        if level > 1 {
+        if level > 1 && level != 4 {
             playSound(fileName: "mafia city level up sound effect")
         }
     }

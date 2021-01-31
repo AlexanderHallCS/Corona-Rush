@@ -125,8 +125,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="cfb-6t-W0e" firstAttribute="width" secondItem="FUd-YI-hBv" secondAttribute="width" id="Osn-OB-rA6"/>
-                            <constraint firstItem="cfb-6t-W0e" firstAttribute="centerY" secondItem="s4s-yr-y51" secondAttribute="centerY" id="SDf-dP-AYw"/>
-                            <constraint firstItem="cfb-6t-W0e" firstAttribute="centerX" secondItem="s4s-yr-y51" secondAttribute="centerX" id="d89-FP-bD4"/>
+                            <constraint firstItem="cfb-6t-W0e" firstAttribute="centerY" secondItem="FUd-YI-hBv" secondAttribute="centerY" id="SDf-dP-AYw"/>
+                            <constraint firstItem="cfb-6t-W0e" firstAttribute="centerX" secondItem="FUd-YI-hBv" secondAttribute="centerX" id="d89-FP-bD4"/>
                             <constraint firstItem="cfb-6t-W0e" firstAttribute="height" secondItem="FUd-YI-hBv" secondAttribute="height" id="x0r-Wv-ols"/>
                         </constraints>
                     </view>
