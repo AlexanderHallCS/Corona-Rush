@@ -79,7 +79,6 @@
 				112A19F325C6239300EE87E3 /* Assets.xcassets */,
 				112A19F525C6239300EE87E3 /* LaunchScreen.storyboard */,
 				112A19F825C6239300EE87E3 /* Info.plist */,
-				11F186DC25C6942900BAFB62 /* Constants.swift */,
 			);
 			path = "Corona Rush";
 			sourceTree = "<group>";
@@ -100,6 +99,7 @@
 				11F186DF25C6942900BAFB62 /* EchoAR.swift */,
 				11F186E025C6942900BAFB62 /* Entry.swift */,
 				11F186E125C6942900BAFB62 /* RemoteTransformation.swift */,
+				11F186DC25C6942900BAFB62 /* Constants.swift */,
 			);
 			path = echoARSwiftSDK;
 			sourceTree = "<group>";

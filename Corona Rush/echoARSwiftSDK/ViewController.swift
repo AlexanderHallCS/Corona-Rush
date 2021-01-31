@@ -24,6 +24,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     var e:EchoAR!;
     
+    var childrenNodes: [SCNNode] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,6 +39,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let scene = SCNScene()
         e.loadAllNodes(){ (nodes) in
             for node in nodes{
+                childrenNodes.append(node)
                 scene.rootNode.addChildNode(node);
             }
         }
@@ -64,14 +67,22 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 
     // MARK: - ARSCNViewDelegate
     
-/*
+
     // Override to create and configure nodes for anchors added to the view's session.
-    func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
+    /*func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
         let node = SCNNode()
      
         return node
+    } */
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let touch = touches.first!
+        let viewTouchLocation:CGPoint = touch.location(in: sceneView)
+        guard let result = sceneView.hitTest(viewTouchLocation, options: nil).first else {
+            return
+        }
+        result.node.removeFromParentNode()
     }
-*/
     
     func session(_ session: ARSession, didFailWithError error: Error) {
         // Present an error message to the user
