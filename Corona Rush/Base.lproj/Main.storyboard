@@ -99,35 +99,48 @@
                     <navigationItem key="navigationItem" id="Fdv-ib-8k2"/>
                     <connections>
                         <outlet property="coronaLeftLabel" destination="qdz-A0-0Uz" id="Dqb-ow-ZdM"/>
+                        <outlet property="levelLabel" destination="QaK-uZ-JwO" id="R3T-Tz-pI7"/>
                         <outlet property="sceneView" destination="BrB-h1-WRS" id="5nT-qQ-ynl"/>
                         <outlet property="timerLabel" destination="ShH-pI-RK0" id="Zvc-Fq-bEV"/>
-                        <segue destination="n7E-j9-A0u" kind="show" id="ioC-oV-PVc"/>
+                        <segue destination="n7E-j9-A0u" kind="show" identifier="arToEnd" id="ioC-oV-PVc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="20" y="79"/>
         </scene>
-        <!--View Controller-->
+        <!--End View Controller-->
         <scene sceneID="qzG-Wo-nYH">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="n7E-j9-A0u" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="n7E-j9-A0u" customClass="EndViewController" customModule="Corona_Rush" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FUd-YI-hBv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WinBG" translatesAutoresizingMaskIntoConstraints="NO" id="cfb-6t-W0e">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="s4s-yr-y51"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cfb-6t-W0e" firstAttribute="width" secondItem="FUd-YI-hBv" secondAttribute="width" id="Osn-OB-rA6"/>
+                            <constraint firstItem="cfb-6t-W0e" firstAttribute="centerY" secondItem="s4s-yr-y51" secondAttribute="centerY" id="SDf-dP-AYw"/>
+                            <constraint firstItem="cfb-6t-W0e" firstAttribute="centerX" secondItem="s4s-yr-y51" secondAttribute="centerX" id="d89-FP-bD4"/>
+                            <constraint firstItem="cfb-6t-W0e" firstAttribute="height" secondItem="FUd-YI-hBv" secondAttribute="height" id="x0r-Wv-ols"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aGm-N1-Olm"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bns-Rb-REo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="809" y="78"/>
+            <point key="canvasLocation" x="808.69565217391312" y="77.445652173913047"/>
         </scene>
     </scenes>
     <resources>
         <image name="PlayButton" width="467" height="199"/>
         <image name="StartBG" width="750" height="1334"/>
+        <image name="WinBG" width="750" height="1334"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

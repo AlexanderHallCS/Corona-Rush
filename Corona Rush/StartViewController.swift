@@ -8,10 +8,10 @@
 import UIKit
 import AVFoundation
 
+var musicAudioPlayer: AVAudioPlayer?
+
 class StartViewController: UIViewController {
 
-    var audioPlayer: AVAudioPlayer?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -38,11 +38,11 @@ class StartViewController: UIViewController {
         do {
             try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
             try AVAudioSession.sharedInstance().setActive(true)
-            audioPlayer = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
-            guard let audioPlayer = audioPlayer else {
+            musicAudioPlayer = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
+            guard let musicAudioPlayer = musicAudioPlayer else {
                 return
             }
-            audioPlayer.play()
+            musicAudioPlayer.play()
         } catch let error {
             print(error.localizedDescription)
         }

@@ -130,6 +130,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             }
         }
         level += 1
+        if level == 4 {
+            self.performSegue(withIdentifier: "arToEnd", sender: nil)
+        }
         coronaLeftLabel.text = "Coronaviruses Left: \(coronaCounter)"
         levelLabel.text = "Level: \(level)"
         if level > 1 {
