@@ -9,23 +9,34 @@
 /* Begin PBXBuildFile section */
 		112A19EB25C6239200EE87E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112A19EA25C6239200EE87E3 /* AppDelegate.swift */; };
 		112A19ED25C6239200EE87E3 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 112A19EC25C6239200EE87E3 /* art.scnassets */; };
-		112A19EF25C6239200EE87E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112A19EE25C6239200EE87E3 /* ViewController.swift */; };
 		112A19F225C6239200EE87E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 112A19F025C6239200EE87E3 /* Main.storyboard */; };
 		112A19F425C6239300EE87E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 112A19F325C6239300EE87E3 /* Assets.xcassets */; };
 		112A19F725C6239300EE87E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 112A19F525C6239300EE87E3 /* LaunchScreen.storyboard */; };
 		112A1A0225C638C100EE87E3 /* La Cumbia Del Coronavirus.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 112A1A0125C638C100EE87E3 /* La Cumbia Del Coronavirus.mp3 */; };
+		112A1A0B25C6402F00EE87E3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112A1A0A25C6402F00EE87E3 /* Constants.swift */; };
+		112A1A0F25C642A700EE87E3 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112A1A0E25C642A700EE87E3 /* StartViewController.swift */; };
+		112A1A1325C64CB000EE87E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112A1A1225C64CB000EE87E3 /* ViewController.swift */; };
+		112A1A1725C6520700EE87E3 /* EchoAR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112A1A0725C63FFA00EE87E3 /* EchoAR.swift */; };
+		112A1A1925C6521D00EE87E3 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112A1A0825C63FFA00EE87E3 /* Entry.swift */; };
+		112A1A1A25C6521D00EE87E3 /* RemoteTransformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112A1A0925C63FFA00EE87E3 /* RemoteTransformation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		112A19E725C6239200EE87E3 /* Corona Rush.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Corona Rush.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		112A19EA25C6239200EE87E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		112A19EC25C6239200EE87E3 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
-		112A19EE25C6239200EE87E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		112A19F125C6239200EE87E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		112A19F325C6239300EE87E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		112A19F625C6239300EE87E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		112A19F825C6239300EE87E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		112A1A0125C638C100EE87E3 /* La Cumbia Del Coronavirus.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "La Cumbia Del Coronavirus.mp3"; path = "../../../Corona Rush Assets/La Cumbia Del Coronavirus.mp3"; sourceTree = "<group>"; };
+		112A1A0625C63FFA00EE87E3 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		112A1A0725C63FFA00EE87E3 /* EchoAR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EchoAR.swift; sourceTree = "<group>"; };
+		112A1A0825C63FFA00EE87E3 /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		112A1A0925C63FFA00EE87E3 /* RemoteTransformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteTransformation.swift; sourceTree = "<group>"; };
+		112A1A0A25C6402F00EE87E3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		112A1A0E25C642A700EE87E3 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		112A1A1225C64CB000EE87E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,14 +69,21 @@
 		112A19E925C6239200EE87E3 /* Corona Rush */ = {
 			isa = PBXGroup;
 			children = (
+				112A1A0725C63FFA00EE87E3 /* EchoAR.swift */,
+				112A1A0625C63FFA00EE87E3 /* LICENSE.md */,
+				112A1A1225C64CB000EE87E3 /* ViewController.swift */,
+				112A1A0825C63FFA00EE87E3 /* Entry.swift */,
+				112A1A0925C63FFA00EE87E3 /* RemoteTransformation.swift */,
+				112A1A0425C63FFA00EE87E3 /* echoARSwiftSDK */,
 				112A1A0025C638B300EE87E3 /* Sounds */,
 				112A19EA25C6239200EE87E3 /* AppDelegate.swift */,
 				112A19EC25C6239200EE87E3 /* art.scnassets */,
-				112A19EE25C6239200EE87E3 /* ViewController.swift */,
 				112A19F025C6239200EE87E3 /* Main.storyboard */,
+				112A1A0E25C642A700EE87E3 /* StartViewController.swift */,
 				112A19F325C6239300EE87E3 /* Assets.xcassets */,
 				112A19F525C6239300EE87E3 /* LaunchScreen.storyboard */,
 				112A19F825C6239300EE87E3 /* Info.plist */,
+				112A1A0A25C6402F00EE87E3 /* Constants.swift */,
 			);
 			path = "Corona Rush";
 			sourceTree = "<group>";
@@ -76,6 +94,13 @@
 				112A1A0125C638C100EE87E3 /* La Cumbia Del Coronavirus.mp3 */,
 			);
 			path = Sounds;
+			sourceTree = "<group>";
+		};
+		112A1A0425C63FFA00EE87E3 /* echoARSwiftSDK */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = echoARSwiftSDK;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,8 +175,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				112A19EF25C6239200EE87E3 /* ViewController.swift in Sources */,
+				112A1A1925C6521D00EE87E3 /* Entry.swift in Sources */,
+				112A1A0F25C642A700EE87E3 /* StartViewController.swift in Sources */,
+				112A1A1A25C6521D00EE87E3 /* RemoteTransformation.swift in Sources */,
 				112A19EB25C6239200EE87E3 /* AppDelegate.swift in Sources */,
+				112A1A1325C64CB000EE87E3 /* ViewController.swift in Sources */,
+				112A1A0B25C6402F00EE87E3 /* Constants.swift in Sources */,
+				112A1A1725C6520700EE87E3 /* EchoAR.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +331,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PFCM63NH3Y;
 				INFOPLIST_FILE = "Corona Rush/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -320,6 +351,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PFCM63NH3Y;
 				INFOPLIST_FILE = "Corona Rush/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
