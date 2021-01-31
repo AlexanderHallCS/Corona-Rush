@@ -14,6 +14,7 @@
 		112A19F725C6239300EE87E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 112A19F525C6239300EE87E3 /* LaunchScreen.storyboard */; };
 		112A1A0225C638C100EE87E3 /* La Cumbia Del Coronavirus.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 112A1A0125C638C100EE87E3 /* La Cumbia Del Coronavirus.mp3 */; };
 		112A1A0F25C642A700EE87E3 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112A1A0E25C642A700EE87E3 /* StartViewController.swift */; };
+		116B4B7025C6E64900BFFC84 /* mafia city level up sound effect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 116B4B6F25C6E64900BFFC84 /* mafia city level up sound effect.mp3 */; };
 		11F186E225C6942900BAFB62 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F186DC25C6942900BAFB62 /* Constants.swift */; };
 		11F186E325C6942900BAFB62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F186DD25C6942900BAFB62 /* ViewController.swift */; };
 		11F186E425C6942900BAFB62 /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = 11F186DE25C6942900BAFB62 /* LICENSE.md */; };
@@ -32,6 +33,7 @@
 		112A19F825C6239300EE87E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		112A1A0125C638C100EE87E3 /* La Cumbia Del Coronavirus.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "La Cumbia Del Coronavirus.mp3"; path = "../../../Corona Rush Assets/La Cumbia Del Coronavirus.mp3"; sourceTree = "<group>"; };
 		112A1A0E25C642A700EE87E3 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		116B4B6F25C6E64900BFFC84 /* mafia city level up sound effect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "mafia city level up sound effect.mp3"; path = "../../../../../Downloads/mafia city level up sound effect.mp3"; sourceTree = "<group>"; };
 		11F186DC25C6942900BAFB62 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		11F186DD25C6942900BAFB62 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		11F186DE25C6942900BAFB62 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 		112A1A0025C638B300EE87E3 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				116B4B6F25C6E64900BFFC84 /* mafia city level up sound effect.mp3 */,
 				112A1A0125C638C100EE87E3 /* La Cumbia Del Coronavirus.mp3 */,
 			);
 			path = Sounds;
@@ -167,6 +170,7 @@
 				112A19F425C6239300EE87E3 /* Assets.xcassets in Resources */,
 				11F186E425C6942900BAFB62 /* LICENSE.md in Resources */,
 				112A19F225C6239200EE87E3 /* Main.storyboard in Resources */,
+				116B4B7025C6E64900BFFC84 /* mafia city level up sound effect.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

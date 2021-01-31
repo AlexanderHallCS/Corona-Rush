@@ -29,7 +29,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     //var childrenNodes: [SCNNode] = []
     
-    var seconds = 30.0
+    var seconds = 60.0
     var inGameTimer = Timer()
     
     var coronaCounter = 0
@@ -45,8 +45,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         //sceneView.showsStatistics = true
         scene = SCNScene()
         reloadCoronaviruses()
-        
-        startTimer()
         
         // Set the scene to the view
         sceneView.scene=scene!;
@@ -91,7 +89,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             } else {
                 self.timerLabel.attributedText = NSAttributedString(string: "0", attributes: attributes)
                 self.inGameTimer.invalidate()
-                // game over
+                // game over (not implemented)
             }
         })
     }
@@ -106,19 +104,32 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         coronaCounter -= 1
         coronaLeftLabel.text = "Coronaviruses Left: \(coronaCounter)"
         if coronaCounter == 0 {
-            reloadCoronaviruses()
+            inGameTimer.invalidate()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
+                self.reloadCoronaviruses()
+            })
+            
         }
     }
     
     func reloadCoronaviruses() {
+        seconds = 60.0
+        startTimer()
         let e = EchoAR();
         e.loadAllNodes(){ (nodes) in
             for node in nodes {
+                node.position.x = generateRandomTransform()
+                node.position.y = generateRandomTransform()
+                node.position.z = generateRandomTransform()
                 scene!.rootNode.addChildNode(node);
                 coronaCounter += 1
             }
         }
         coronaLeftLabel.text = "Coronaviruses Left: \(coronaCounter)"
+    }
+    
+    func generateRandomTransform() -> Float {
+        return Float.random(in: -50..<50)
     }
     
     func session(_ session: ARSession, didFailWithError error: Error) {
